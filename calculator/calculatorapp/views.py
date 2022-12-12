@@ -6,7 +6,7 @@ from .forms import HomeForm
 class HomePage(TemplateView):
     template_name = 'calculatorapp/index.html'
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         form = HomeForm()
         return render(request, self.template_name, {'form': form})
 
@@ -23,5 +23,6 @@ class HomePage(TemplateView):
                 result = num1 * num2
             elif 'div' in request.POST:
                 result = num1 / num2
+
 
         return render(request, self.template_name, context={'form': form, 'result': result})
