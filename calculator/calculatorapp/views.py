@@ -24,5 +24,4 @@ class HomePage(TemplateView):
             elif 'div' in request.POST:
                 result = num1 / num2
 
-
         return render(request, self.template_name, context={'form': form, 'result': result})
