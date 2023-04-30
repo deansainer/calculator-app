@@ -1,3 +1,4 @@
 A simple web application of calculator using Django.
 
-![image](https://user-images.githubusercontent.com/109224340/229630291-559741f1-73e0-4f11-a1e9-a50eee4e989c.png)
+
+![calc](https://user-images.githubusercontent.com/109224340/235351948-149d0428-efc1-4497-9714-f1d93bb452fd.png)
