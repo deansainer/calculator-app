@@ -1,8 +1,11 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 {% block body %}
-<center>
-<div class="container text-center">
 
-    <h1>Calculator</h1>
+<div class="calc_form">
+<div class="rounded-border">
+    <div class="calc_tag"><h1>Calculator</h1></center></div>
     <br/>
     <br/>
 
@@ -11,20 +14,23 @@
         {% csrf_token %}
         {{ form.as_p }}
 
-
-        <button type="submit" name="add">+</button>
-        <button type="submit" name="sub">-</button>
-        <button type="submit" name="mul">*</button>
-        <button type="submit" name="div">/</button>
-
+<div class="buttons">
+        <button class="btn btn-dark" type="submit" name="add">+</button>
+        <button class="btn btn-dark" type="submit" name="sub">-</button>
+        <button class="btn btn-dark" type="submit" name="mul">*</button>
+        <button class="btn btn-dark" type="submit" name="div">/</button>
+    </div>
+        <div class="res">
+            <h3>Result: {{ result }}</h3>
+        </div>
 
     </form>
 
     <br/>
     <br/>
-    <h3>Result: {{ result }}</h3>
 
 </div>
-</center>
+</div>
+
 
 {% endblock %}

@@ -13,15 +13,15 @@ class HomePage(TemplateView):
     def post(self, request):
         form = HomeForm(request.POST)
         if form.is_valid():
-            num1 = form.cleaned_data['num1']
-            num2 = form.cleaned_data['num2']
+            number1 = form.cleaned_data['number1']
+            number2 = form.cleaned_data['number2']
             if 'add' in request.POST:
-                result = num1 + num2
+                result = number1 + number2
             elif 'sub' in request.POST:
-                result = num1 - num2
+                result = number1 - number2
             elif 'mul' in request.POST:
-                result = num1 * num2
+                result = number1 * number2
             elif 'div' in request.POST:
-                result = num1 / num2
+                result = number1 / number2
 
         return render(request, self.template_name, context={'form': form, 'result': result})
